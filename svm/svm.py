@@ -51,7 +51,7 @@ class Support_Vector_Machine:
 		return self
 
 	def predict(self, X):
-		vals = np.dot(X, self._w) + b
+		vals = np.dot(X, self._w) + self._b
 		y_hat =np.where(vals >= 0., 1, -1)
 		return y_hat
 
